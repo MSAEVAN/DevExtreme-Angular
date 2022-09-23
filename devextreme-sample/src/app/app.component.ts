@@ -12,8 +12,28 @@ const data: any = require('./sample.json');
 export class AppComponent {
   title = 'devextreme-sample';
 
-  dataSource: DataSource;
+  // dataSource: DataSource;
 
+  allMode: string = "";
+
+  checkBoxesMode: string = "";
+  
+
+  dsampleData: any[] = [
+    {"name": "Msa Evan", "email": "msaevan@gmail.com", "Country": "Bangladesh"},
+    {"name": "Lio", "email": "msaevan@gmail.com", "Country": "India"},
+    {"name": "Divya", "email": "msaevan@gmail.com", "Country": "India"},
+    {"name": "Msa Evan", "email": "msaevan@gmail.com", "Country": "India"},
+    {"name": "Msa Evan", "email": "msaevan@gmail.com", "Country": "Malay"},
+    // {"name": "Msa Evan", "email": "msaevan@gmail.com"},
+    // {"name": "Msa Evan", "email": "msaevan@gmail.com"},
+    // {"name": "Msa Evan", "email": "msaevan@gmail.com"},
+    // {"name": "Msa Evan", "email": "msaevan@gmail.com"},
+    // {"name": "Msa Evan", "email": "msaevan@gmail.com"},
+    // {"name": "Msa Evan", "email": "msaevan@gmail.com"},
+  ];
+
+  
   collapsed = false;
 
   contentReady = (e: any) => {
@@ -26,6 +46,10 @@ export class AppComponent {
   customizeTooltip = (pointsInfo: any) => ({ text: `${parseInt(pointsInfo.originalValue)}%` });
 
   constructor() {
-    this.dataSource = data;
+    // this.dataSource = data;
+
+    this.allMode = 'allPages';
+    // this.checkBoxesMode = dsampleData.current().startsWith('material') ? 'always' : 'onClick';
+
   }
 }
